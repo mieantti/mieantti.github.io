@@ -7,12 +7,12 @@ import { css } from '@emotion/react'
 import CssClass from '../../strings/CssClass'
 
 // Feature
-import { IWorkItem, WorkItem } from './workItem/WorkItem'
+import { IItem, Item } from './Item'
 
 const mainStyles = css`
   display: flex;
   padding: 5rem 5rem 5rem 5rem;
-  min-height: 65vh;
+  min-height: 60vh;
   @media only screen and (min-device-width: 350px) and (max-device-width: 915px) {
     padding: 1rem 5rem 0 5rem;
   }
@@ -21,7 +21,7 @@ const mainStyles = css`
   }
 `
 
-const items: IWorkItem[] = [
+const items: IItem[] = [
   {
     effective: new Date(),
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -47,7 +47,7 @@ const items: IWorkItem[] = [
 export const Content = () => {
   return (
     <main css={mainStyles} className={CssClass.BaseMaxWidth}>
-      <WorkItem items={items} />
+      <Item items={items} />
     </main>
   )
 }

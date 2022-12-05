@@ -20,7 +20,7 @@ export const globalStyles = css`
     top: 0;
     z-index: -1;
   }
-  #work-item-date {
+  #content-item-date {
     width: 10rem;
   }
   @media (prefers-color-scheme: dark) {

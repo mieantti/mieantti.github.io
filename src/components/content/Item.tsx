@@ -7,9 +7,9 @@ import { css } from '@emotion/react'
 import { FunctionComponent } from 'react'
 
 // Strings
-import CssId from '../../../strings/CssId'
+import CssId from '../../strings/CssId'
 
-const workItemStyles = css`
+const itemStyles = css`
   display: grid;
   line-height: 1.6;
   grid: 4rem / auto auto auto;
@@ -38,21 +38,21 @@ const workItemStyles = css`
   }
 `
 
-interface IWorkItemProps {
-  items: IWorkItem[]
+interface IItemProps {
+  items: IItem[]
 }
 
-export interface IWorkItem {
+export interface IItem {
   effective: Date
   content: string
 }
 
-export const WorkItem: FunctionComponent<IWorkItemProps> = ({ items }) => {
+export const Item: FunctionComponent<IItemProps> = ({ items }) => {
   return (
     <section>
-      {items.map((_: IWorkItem, idx: number) => (
-        <div css={workItemStyles} key={new Date().valueOf() + idx}>
-          <p id={CssId.WorkItemDate}>{_.effective.toLocaleDateString()}</p>
+      {items.map((_: IItem, idx: number) => (
+        <div css={itemStyles} key={new Date().valueOf() + idx}>
+          <p id={CssId.ContentItemDate}>{_.effective.toLocaleDateString()}</p>
           <p>{_.content}</p>
         </div>
       ))}
