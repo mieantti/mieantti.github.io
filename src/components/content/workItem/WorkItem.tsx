@@ -19,8 +19,8 @@ export interface IWorkItem {
 export const WorkItem: FunctionComponent<IWorkItemProps> = ({ items }) => {
   return (
     <section>
-      {items.map((_: IWorkItem) => (
-        <div className={CssClass.WorkItem}>
+      {items.map((_: IWorkItem, idx: number) => (
+        <div className={CssClass.WorkItem} key={new Date().valueOf() + idx}>
           <p id={CssId.WorkItemDate}>{_.effective.toLocaleDateString()}</p>
           <p id={CssId.WorkItemContent}>{_.content}</p>
         </div>
