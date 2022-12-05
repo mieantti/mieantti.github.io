@@ -14,7 +14,7 @@ import { Footer } from './components/footer/Footer'
 
 // Static
 import './App.css'
-import particlesOptions from './particles.json'
+import { particlesOptions } from './particles/particlesOptions'
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
