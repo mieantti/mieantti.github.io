@@ -7,14 +7,17 @@ import type { Engine } from 'tsparticles-engine'
 import { loadFull } from 'tsparticles'
 import { ISourceOptions } from 'tsparticles-engine'
 
+// Emotion
+import { Global } from '@emotion/react'
+
 // Components
 import { Navigation } from './components/navigation/Navigation'
 import { Content } from './components/content/Content'
 import { Footer } from './components/footer/Footer'
 
 // Static
-import './App.css'
 import { particlesOptions } from './particles/particlesOptions'
+import { globalStyles } from './styles/global-styles/globalStyles'
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -22,7 +25,9 @@ const App = () => {
   }, [])
 
   return (
-    <div className="app-root">
+    <>
+      <Global styles={globalStyles} />
+
       <Particles
         options={particlesOptions as ISourceOptions}
         init={particlesInit}
@@ -30,7 +35,7 @@ const App = () => {
       <Navigation />
       <Content />
       <Footer />
-    </div>
+    </>
   )
 }
 

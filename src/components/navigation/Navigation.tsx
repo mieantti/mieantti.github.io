@@ -3,9 +3,6 @@ import Configuration from '../../strings/Configuration'
 import CssClass from '../../strings/CssClass'
 import CssId from '../../strings/CssId'
 
-// Static
-import './Navigation.css'
-
 export const Navigation = () => {
   return (
     <header>
