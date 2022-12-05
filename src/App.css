@@ -31,14 +31,14 @@ main {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: var(--darkBodyBgColor);
-    color: var(--darkBodyColor);
+    background-color: #2962ff;
+    color: #000000;
   }
 }
 @media (prefers-color-scheme: light) {
   body {
-    background-color: var(--lightBodyBgColor);
-    color: var(--lightBodyColor);
+    background-color: #448aff;
+    color: #000000;
   }
 }
 @media only screen and (min-device-width: 350px) and (max-device-width: 915px) {

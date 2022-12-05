@@ -3,6 +3,9 @@ import Configuration from '../../strings/Configuration'
 import CssClass from '../../strings/CssClass'
 import CssId from '../../strings/CssId'
 
+// Static
+import './Footer.css'
+
 export const Footer = () => {
   return (
     <footer>

@@ -11,7 +11,7 @@ export const Navigation = () => {
     <header>
       <nav id={CssId.Navigation} className={CssClass.BaseMaxWidth}>
         <h1 id={CssId.NavigationH1}>
-          <a href={'javascript:location.reload()'}>{Configuration.SiteName}</a>
+          <p>{Configuration.SiteName}</p>
         </h1>
       </nav>
     </header>

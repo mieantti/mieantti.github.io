@@ -3,7 +3,7 @@
   transition: 0.3s;
 }
 #footer-content p:hover {
-  color: #0277bd;
+  color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {

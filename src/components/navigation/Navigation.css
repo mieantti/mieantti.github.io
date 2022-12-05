@@ -5,19 +5,19 @@
 #navigation-h1 {
   width: 50rem;
 }
-#navigation-h1 a {
+#navigation-h1 p {
   text-decoration: none;
   transition: 0.3s;
 }
-#navigation-h1 a:hover {
-  color: #0277bd;
+#navigation-h1 p:hover {
+  color: #fff;
 }
-a {
+p {
   color: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
-  #navigation-h1 a:hover {
+  #navigation-h1 p:hover {
     color: #f5f5f5;
   }
 }
