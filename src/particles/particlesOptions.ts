@@ -1,6 +1,7 @@
 export const particlesOptions = {
   fpsLimit: 120,
   particles: {
+    color: '#fff',
     move: {
       direction: 'none',
       enable: true,
