@@ -6,56 +6,97 @@ import { css } from '@emotion/react'
 // React
 import { FunctionComponent } from 'react'
 
-// Strings
-import CssId from '../../strings/CssId'
+// Global - Helpers
+import {
+  mqOnlyScreenMinAndMax,
+  prefersLightColorSchemeMq,
+} from '../../global/helpers/mq'
 
-const itemStyles = css`
-  display: grid;
-  line-height: 1.6;
-  grid: 4rem / auto auto auto;
-  grid-gap: 1rem;
-  transition: 0.3s;
+// Global - Styles
+import {
+  white,
+  yellowishDark,
+  yellowishLight,
+} from '../../global/styles/colors'
+import { flex } from '../../global/styles/general'
 
-  :hover {
-    color: #fff;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :hover {
-      color: #f5f5f5;
-    }
-  }
-
-  @media only screen and (min-device-width: 350px) and (max-device-width: 915px) {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 2rem;
-    grid-gap: 0.5rem;
-  }
-
-  p {
-    margin: 0;
-  }
-`
-
-interface IItemProps {
-  items: IItem[]
+interface ISocial {
+  link: string
+  name: string
+  icon: string
 }
 
-export interface IItem {
-  effective: Date
-  content: string
-}
+const social: Array<ISocial> = [
+  {
+    link: '#link',
+    name: '#name',
+    icon: '#icon',
+  },
+  {
+    link: '#link',
+    name: '#name',
+    icon: '#icon',
+  },
+  {
+    link: '#link',
+    name: '#name',
+    icon: '#icon',
+  },
+  {
+    link: '#link',
+    name: '#name',
+    icon: '#icon',
+  },
+]
 
-export const Item: FunctionComponent<IItemProps> = ({ items }) => {
+const itemRootStyle = css({
+  lineHeight: '2',
+  transition: '0.3s',
+  [mqOnlyScreenMinAndMax[0]]: {
+    display: flex,
+    flexWrap: 'wrap',
+  },
+})
+
+const hoverOrFocusH3 = css({
+  '&:hover,&:focus': white,
+})
+
+const hoverOrFocusH4 = css({
+  '&:hover,&:focus': yellowishDark,
+  [prefersLightColorSchemeMq]: {
+    '&:hover,&:focus': yellowishLight,
+  },
+})
+
+const socialsStyle = css({
+  display: flex,
+})
+
+const iconStyle = css({
+  paddingRight: '1em',
+  paddingTop: '1.25em',
+  margin: 0,
+})
+
+export const Item: FunctionComponent = () => {
   return (
     <section>
-      {items.map((_: IItem, idx: number) => (
-        <div css={itemStyles} key={new Date().valueOf() + idx}>
-          <p id={CssId.ContentItemDate}>{_.effective.toLocaleDateString()}</p>
-          <p>{_.content}</p>
-        </div>
-      ))}
+      <div css={itemRootStyle}>
+        <h3 css={hoverOrFocusH3}>
+          hello, it's lovely to meet you. here are some sparkles for you ✨
+        </h3>
+        <h4 css={hoverOrFocusH4}>I am a software developer</h4>
+      </div>
+      <div css={socialsStyle}>
+        {social.map((_) => {
+          return (
+            <>
+              <p css={iconStyle}>{_.icon}</p>
+            </>
+          )
+        })}
+      </div>
     </section>
   )
 }

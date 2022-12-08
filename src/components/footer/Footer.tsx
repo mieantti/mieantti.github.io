@@ -1,16 +1,40 @@
+/** @jsxImportSource @emotion/react */
+
+// Emotion
+import { css } from '@emotion/react'
+
+// Global - Helpers
+import { prefersLightColorSchemeMq } from '../../global/helpers/mq'
+
+// Global - Styles
+import { paddingFull3Rem } from '../../global/styles/air'
+import { classBaseMaxWidth } from '../../global/styles/classNames'
+import { purpleLightish, purpleLight } from '../../global/styles/colors'
+
 // Strings
 import Configuration from '../../strings/Configuration'
-import CssClass from '../../strings/CssClass'
-import CssId from '../../strings/CssId'
+
+const footerStyle = css({
+  padding: paddingFull3Rem,
+  transition: '0.3s',
+})
+
+const paragraphHoverFocusActive = css({
+  '&:hover,&:focus': purpleLightish,
+  [prefersLightColorSchemeMq]: {
+    '&:hover,&:focus': purpleLight,
+  },
+})
+
+const footerYearAndName = ` ${new Date().getUTCFullYear()} ${
+  Configuration.SiteName
+}`
 
 export const Footer = () => {
   return (
     <footer>
-      <div id={CssId.FooterContent} className={CssClass.BaseMaxWidth}>
-        <p>
-          &copy;
-          {` ${new Date().getUTCFullYear()} ${Configuration.SiteName}`}
-        </p>
+      <div css={footerStyle} className={classBaseMaxWidth}>
+        <p css={paragraphHoverFocusActive}>©️{footerYearAndName}</p>
       </div>
     </footer>
   )

@@ -17,6 +17,8 @@ import { Footer } from './components/footer/Footer'
 
 // Static
 import { particlesOptions } from './particles/particlesOptions'
+
+// Global - Styles
 import { globalStyles } from './styles/global-styles/globalStyles'
 
 const App = () => {

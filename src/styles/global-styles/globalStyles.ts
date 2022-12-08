@@ -20,9 +20,6 @@ export const globalStyles = css`
     top: 0;
     z-index: -1;
   }
-  #content-item-date {
-    width: 10rem;
-  }
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #2962ff;
@@ -39,52 +36,5 @@ export const globalStyles = css`
     margin-left: auto;
     margin-right: auto;
     max-width: 100rem;
-  }
-
-  /* Footer */
-  #footer-content {
-    padding: 3rem 3rem 3rem 3rem;
-    transition: 0.3s;
-  }
-  #footer-content p:hover {
-    color: #fff;
-  }
-  @media (prefers-color-scheme: dark) {
-    #footer-content p:hover {
-      color: #f5f5f5;
-    }
-  }
-  @media only screen and (min-device-width: 350px) and (max-device-width: 915px) {
-    #footer-content {
-      padding: 3rem 3rem 3rem 3rem;
-    }
-  }
-
-  /* Navigation */
-  #navigation {
-    display: flex;
-    padding: 1rem 5rem 3rem 5rem;
-  }
-  #navigation-h1 {
-    width: 50rem;
-  }
-  #navigation-h1 p {
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  #navigation-h1 p:hover {
-    color: #fff;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    #navigation-h1 p:hover {
-      color: #f5f5f5;
-    }
-  }
-
-  @media only screen and (min-device-width: 350px) and (max-device-width: 915px) {
-    #navigation {
-      padding: 1rem 5rem 1rem 5rem;
-    }
   }
 `
