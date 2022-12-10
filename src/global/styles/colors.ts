@@ -1,31 +1,44 @@
+// Emotion
 import { css } from '@emotion/react'
 
+// Styles - color values
+import {
+  deepOrangeLightValue,
+  deepOrangeLightishValue,
+  purpleLightValue,
+  purpleLightishValue,
+  yellowishValue,
+  yellowishLightValue,
+  whiteValue,
+  whitishValue,
+} from './colorValues'
+
 export const white = css({
-  color: '#fff',
+  color: whiteValue,
 })
 
 export const whitish = css({
-  color: '#f5f5f5',
+  color: whitishValue,
 })
 
 export const deepOrangeLight = css({
-  color: '#FFAB91',
+  color: deepOrangeLightValue,
 })
 
 export const deepOrangeLightish = css({
-  color: '#FF7043',
+  color: deepOrangeLightishValue,
 })
 
 export const purpleLight = css({
-  color: '#CE93D8',
+  color: purpleLightValue,
 })
 
 export const purpleLightish = css({
-  color: '#BA68C8',
+  color: purpleLightishValue,
 })
 
 export const yellowishDark = css({
-  color: '#ffea00',
+  color: yellowishValue,
 })
 
-export const yellowishLight = css({ color: '#ffd600' })
+export const yellowishLight = css({ color: yellowishLightValue })

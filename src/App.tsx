@@ -19,7 +19,7 @@ import { Footer } from './components/footer/Footer'
 import { particlesOptions } from './particles/particlesOptions'
 
 // Global - Styles
-import { globalStyles } from './styles/global-styles/globalStyles'
+import { globalStyles } from './global/styles/global-styles/globalStyles'
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -34,6 +34,7 @@ const App = () => {
         options={particlesOptions as ISourceOptions}
         init={particlesInit}
       />
+
       <Navigation />
       <Content />
       <Footer />
