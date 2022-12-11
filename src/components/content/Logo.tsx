@@ -66,7 +66,7 @@ export const Icon: FunctionComponent<IIconProps> = ({ link, component }) => {
   return (
     <>
       <IconContext.Provider value={iconCtx}>
-        <a href={link} tabIndex={-1}>
+        <a href={link} tabIndex={-1} target="_blank" rel="noreferrer">
           {component}
         </a>
       </IconContext.Provider>
