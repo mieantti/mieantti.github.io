@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mieantti.github.io/static/css/main.93a0497a.css",
+    "main.js": "/mieantti.github.io/static/js/main.b3191a96.js",
+    "static/js/422.bfd297e8.chunk.js": "/mieantti.github.io/static/js/422.bfd297e8.chunk.js",
+    "index.html": "/mieantti.github.io/index.html",
+    "main.93a0497a.css.map": "/mieantti.github.io/static/css/main.93a0497a.css.map",
+    "main.b3191a96.js.map": "/mieantti.github.io/static/js/main.b3191a96.js.map",
+    "422.bfd297e8.chunk.js.map": "/mieantti.github.io/static/js/422.bfd297e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93a0497a.css",
+    "static/js/main.b3191a96.js"
+  ]
+}
