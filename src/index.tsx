@@ -2,22 +2,12 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
-// Static
-import './index.css'
-
 // Components
 import App from './App'
 
 // Other
 import * as serviceWorker from './serviceWorker'
 import reportWebVitals from './reportWebVitals'
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// )
 
 const root = createRoot(document.getElementById('root') as HTMLElement)
 root.render(

@@ -1,8 +1,7 @@
 {
   "name": "home",
   "version": "1.0",
-  "homepage": "https://mieantti.github.io/mieantti.github.io",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/core": ">=7.0.0-0 <8.0.0",
     "@babel/plugin-syntax-flow": "^7.14.5",
@@ -28,8 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "pnpm run build && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
