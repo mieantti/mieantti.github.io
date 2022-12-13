@@ -28,7 +28,7 @@ import { flex } from '../../global/styles/general'
 import Configuration from '../../strings/Configuration'
 
 // Feature
-import { Icon } from './Logo'
+import { Icon } from './Icon'
 
 interface ISocial {
   id: number
