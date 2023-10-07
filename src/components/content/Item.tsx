@@ -4,11 +4,7 @@
 import { css, keyframes } from '@emotion/react'
 
 // React
-import { FunctionComponent } from 'react'
-
-// react-icons
-import { VscGithubInverted } from 'react-icons/vsc'
-import { RxLinkedinLogo } from 'react-icons/rx'
+import { FunctionComponent, useContext } from 'react'
 
 // Global - Helpers
 import {
@@ -24,43 +20,8 @@ import {
 } from '../../global/styles/colors'
 import { flex } from '../../global/styles/general'
 
-// Strings
-import Configuration from '../../strings/Configuration'
-
-// Feature
-import { Icon } from './Icon'
-
-interface ISocial {
-  id: number
-  link: string
-  name: string
-  icon: JSX.Element
-}
-
-const social: Array<ISocial> = [
-  {
-    id: 1,
-    link: Configuration.GitHubProfileLink,
-    name: Configuration.GitHub,
-    icon: (
-      <Icon
-        link={Configuration.GitHubProfileLink}
-        component={<VscGithubInverted />}
-      />
-    ),
-  },
-  {
-    id: 2,
-    link: Configuration.LinkedInProfileLink,
-    name: Configuration.LinkedIn,
-    icon: (
-      <Icon
-        link={Configuration.LinkedInProfileLink}
-        component={<RxLinkedinLogo />}
-      />
-    ),
-  },
-]
+// Context
+import { ConfigurationContext } from '../../context/configurationContext'
 
 const itemRootStyle = css({
   lineHeight: '2',
@@ -105,6 +66,8 @@ const sparklesTxtChange = keyframes`
 `
 
 export const Item: FunctionComponent = () => {
+  const { socials } = useContext(ConfigurationContext)
+
   return (
     <section>
       <div css={itemRootStyle}>
@@ -122,7 +85,7 @@ export const Item: FunctionComponent = () => {
         <h4 css={hoverOrFocusH4}>btw, I work as a software developer</h4>
       </div>
       <div css={socialsStyle}>
-        {social.map((_) => {
+        {socials.map((_) => {
           return (
             <p key={_.id} css={iconStyle}>
               {_.icon}

@@ -1,5 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
+// React
+import { useContext } from 'react'
+
 // Emotion
 import { css } from '@emotion/react'
 
@@ -11,8 +14,8 @@ import { paddingFull3Rem } from '../../global/styles/air'
 import { classBaseMaxWidth } from '../../global/styles/classNames'
 import { purpleLightish, purpleLight } from '../../global/styles/colors'
 
-// Strings
-import Configuration from '../../strings/Configuration'
+// Context
+import { ConfigurationContext } from '../../context/configurationContext'
 
 const footerStyle = css({
   padding: paddingFull3Rem,
@@ -26,11 +29,11 @@ const paragraphHoverFocusActive = css({
   },
 })
 
-const footerYearAndName = ` ${new Date().getUTCFullYear()} ${
-  Configuration.SiteName
-}`
-
 export const Footer = () => {
+  const { siteName } = useContext(ConfigurationContext)
+
+  const footerYearAndName = ` ${new Date().getUTCFullYear()} ${siteName}`
+
   return (
     <footer>
       <div css={footerStyle} className={classBaseMaxWidth}>
