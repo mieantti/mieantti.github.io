@@ -1,7 +1,25 @@
-export const particlesOptions = {
+import { ISourceOptions } from 'tsparticles-engine'
+
+export const particlesOptions: ISourceOptions = {
   fpsLimit: 120,
+  interactivity: {
+    events: {
+      onClick: {
+        enable: true,
+        mode: 'push',
+      },
+      resize: true,
+    },
+    modes: {
+      push: {
+        quantity: 5,
+      },
+    },
+  },
   particles: {
-    color: '#fff',
+    color: {
+      value: '#ffffff',
+    },
     move: {
       direction: 'none',
       enable: true,
@@ -9,8 +27,15 @@ export const particlesOptions = {
         default: 'out',
       },
       random: true,
-      speed: 0.1,
+      speed: 1,
       straight: false,
+    },
+    number: {
+      density: {
+        enable: true,
+        area: 800,
+      },
+      value: 80,
     },
     opacity: {
       animation: {
@@ -20,12 +45,14 @@ export const particlesOptions = {
       },
       value: { min: 0, max: 1 },
     },
+    shape: {
+      type: 'circle',
+    },
+    reduceDuplicates: true,
     size: {
       random: true,
       value: { min: 1, max: 3 },
     },
-    shape: { type: 'circle' },
-    reduceDuplicates: true,
   },
   detectRetina: true,
 }

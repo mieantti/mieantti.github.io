@@ -4,8 +4,7 @@ import Particles from 'react-particles'
 
 // tsparticles
 import type { Engine } from 'tsparticles-engine'
-import { loadFull } from 'tsparticles'
-import { ISourceOptions } from 'tsparticles-engine'
+import { loadSlim } from 'tsparticles-slim'
 
 // Emotion
 import { Global } from '@emotion/react'
@@ -31,7 +30,7 @@ import { RxLinkedinLogo } from 'react-icons/rx'
 
 const App = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
+    await loadSlim(engine)
   }, [])
 
   const githubProfileLink = 'https://github.com/mieantti'
@@ -64,10 +63,7 @@ const App = () => {
     <>
       <Global styles={globalStyles} />
 
-      <Particles
-        options={particlesOptions as ISourceOptions}
-        init={particlesInit}
-      />
+      <Particles init={particlesInit} options={particlesOptions} />
 
       <ConfigurationContext.Provider value={ctx}>
         <Navigation />
