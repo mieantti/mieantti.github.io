@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antti Miettinen - Personal Site">
+    <title>Antti Miettinen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="starHunter.css">
+</head>
+<body>
+    <div id="announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    <div id="star-tracker" class="star-tracker">Stars found: 0/5</div>
+    <div class="hidden-stars"></div>
+    <main>
+        <h1>Antti Miettinen</h1>
+        <p class="title">Software Developer</p>
+        <div class="social">
+            <a href="https://linkedin.com/in/mieantti" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> A.M.</p>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+            <span id="themeIcon" aria-hidden="true">☀️</span>
+            <span id="themeText" class="sr-only">Dark mode</span>
+        </button>
+    </footer>
+
+    <script src="themeToggler.js"></script>
+    <script src="starHunter.js"></script>
+</body>
+</html>
